@@ -2,13 +2,12 @@
 Author: Vincent Young
 Date: 2022-10-12 04:54:01
 LastEditors: Vincent Young
-LastEditTime: 2022-10-12 05:29:17
-FilePath: /GmailValidChecker/GmailChecker/gmail-check.py
+LastEditTime: 2022-10-12 05:51:53
+FilePath: /GmailValidChecker/GmailChecker/GmailChecker.py
 Telegram: https://t.me/missuo
 
 Copyright © 2022 by Vincent, All Rights Reserved. 
 '''
-
 
 import requests
 
