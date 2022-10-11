@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-12 04:52:04
  * @LastEditors: Vincent Young
- * @LastEditTime: 2022-10-12 05:36:52
+ * @LastEditTime: 2022-10-12 06:15:17
  * @FilePath: /GmailValidChecker/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -38,7 +38,7 @@ for i in range(1000000, 9999999):
     GmailChecker.verify(email)
 ```
 
-## Pypi
+## PyPi
 <a href="https://pypi.org/project/GmailChecker/"><img src="https://img.shields.io/badge/Pypi-000000?style=for-the-badge&logo=pypi&logoColor=red" /></a>
 
 ## Reference Articles
