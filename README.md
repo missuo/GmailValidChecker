@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-12 04:52:04
  * @LastEditors: Vincent Young
- * @LastEditTime: 2022-10-13 01:39:45
+ * @LastEditTime: 2022-10-13 01:46:43
  * @FilePath: /GmailValidChecker/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -24,7 +24,7 @@ The program will return only two results:
 
 
 ## Update
-### 0.0.7
+### 0.0.8
 - Hide `Chrome` Windows, using no-browser.
 - Record results to `result.txt` file.
 

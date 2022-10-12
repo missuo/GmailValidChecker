@@ -2,7 +2,7 @@
 Author: Vincent Young
 Date: 2022-10-12 20:37:22
 LastEditors: Vincent Young
-LastEditTime: 2022-10-13 01:41:47
+LastEditTime: 2022-10-13 01:46:26
 FilePath: /GmailValidChecker/GmailChecker/GmailCheckerEnhanced.py
 Telegram: https://t.me/missuo
 
@@ -55,4 +55,3 @@ def scan(emailPrefix):
 			f.close()
 			print(emailPrefix)
 		driver.close()
-scan(3772737)
