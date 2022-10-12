@@ -2,7 +2,7 @@
 Author: Vincent Young
 Date: 2022-10-12 20:37:22
 LastEditors: Vincent Young
-LastEditTime: 2022-10-12 21:00:11
+LastEditTime: 2022-10-13 01:41:47
 FilePath: /GmailValidChecker/GmailChecker/GmailCheckerEnhanced.py
 Telegram: https://t.me/missuo
 
@@ -10,6 +10,8 @@ Copyright © 2022 by Vincent, All Rights Reserved.
 '''
 
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait  # for implicit and explict waits
+from selenium.webdriver.chrome.options import Options  # for suppressing the browser
 import time, requests
 
 def verify(emailPrefix):
@@ -24,9 +26,16 @@ def verify(emailPrefix):
 	else:
 		return False
 
-def openChrome():
-	driver = webdriver.Chrome("./chromedriver")
-	return driver
+def openChrome(openType=None):
+	if openType == "withBrowser":
+		# with browser mode
+		driver = webdriver.Chrome("./chromedriver")
+	else: 
+		# no browser mode
+		option = webdriver.ChromeOptions()
+		option.add_argument("--headless")
+		driver = webdriver.Chrome('./chromedriver', options=option)
+		return driver
 
 def startVerify(driver, emailPrefix):
 	driver.get("https://accounts.google.com/signup/v2/webcreateaccount?biz=false&cc=JP&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fnlr%3D1&dsh=S2013611188%3A1665547988680440&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&service=accountsettings&authuser=0")
@@ -37,10 +46,13 @@ def startVerify(driver, emailPrefix):
 	return result
 
 def scan(emailPrefix):
-	# print("In this mode, you must place the corresponding version of the chromedriver file in the same directory as your file.")
 	emailPrefix = str(emailPrefix)
 	if verify(emailPrefix) == False:
 		driver = openChrome()
 		if startVerify(driver, emailPrefix) == False:
+			f = open("./result.txt", "a")
+			f.write(emailPrefix + "\n")
+			f.close()
 			print(emailPrefix)
-		driver.close() 
+		driver.close()
+scan(3772737)
