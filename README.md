@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-12 04:52:04
  * @LastEditors: Vincent Young
- * @LastEditTime: 2022-10-12 21:05:00
+ * @LastEditTime: 2022-10-12 21:11:40
  * @FilePath: /GmailValidChecker/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -18,7 +18,8 @@ The program will return only two results:
 - `Alive`: means that everything is fine with this Gmail and is being used.
 - `Unregistered`: It means that the Gmail is not registered or is **blocked**.
 
-**You must be aware that an `Unregistered` status does not mean that you are truly unregistered. The program cannot determine whether Gmail is unregistered or blocked.**
+**~~You must be aware that an `Unregistered` status does not mean that you are truly unregistered. The program cannot determine whether Gmail is unregistered or blocked.~~ Determining whether a state is truly unregistered is already supported in the `Enhanced Mode`.**
+
 
 ## Update
 ### 0.0.6
