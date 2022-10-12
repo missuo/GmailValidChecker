@@ -2,7 +2,7 @@
 Author: Vincent Young
 Date: 2022-10-12 20:37:22
 LastEditors: Vincent Young
-LastEditTime: 2022-10-12 20:42:29
+LastEditTime: 2022-10-12 21:00:11
 FilePath: /GmailValidChecker/GmailChecker/GmailCheckerEnhanced.py
 Telegram: https://t.me/missuo
 
@@ -37,7 +37,7 @@ def startVerify(driver, emailPrefix):
 	return result
 
 def scan(emailPrefix):
-	print("In this mode, you must place the corresponding version of the chromedriver file in the same directory as your file.")
+	# print("In this mode, you must place the corresponding version of the chromedriver file in the same directory as your file.")
 	emailPrefix = str(emailPrefix)
 	if verify(emailPrefix) == False:
 		driver = openChrome()

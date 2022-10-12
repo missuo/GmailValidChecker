@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-12 04:52:04
  * @LastEditors: Vincent Young
- * @LastEditTime: 2022-10-12 20:57:11
+ * @LastEditTime: 2022-10-12 21:00:02
  * @FilePath: /GmailValidChecker/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -21,6 +21,9 @@ The program will return only two results:
 **You must be aware that an `Unregistered` status does not mean that you are truly unregistered. The program cannot determine whether Gmail is unregistered or blocked.**
 
 ## Update
+### 0.0.6
+- Fixed bug
+
 ### 0.0.5
 - Add Enhanced Mode
 - Support for truly unregistered judgments
