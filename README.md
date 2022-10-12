@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-12 04:52:04
  * @LastEditors: Vincent Young
- * @LastEditTime: 2022-10-12 21:00:02
+ * @LastEditTime: 2022-10-12 21:05:00
  * @FilePath: /GmailValidChecker/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -37,8 +37,9 @@ pip install GmailChecker
 1. Create a new `.py` file with the following codes.
 ```python
 from GmailChecker import GmailChecker
+# Only Print Unregistered Result
 GmailChecker.verify("admin@gmail.com")
-# Don't Print Alive Result
+# Print Alive Result
 GmailChecker.verify("admin@gmail.com", 1)
 ```
 2. If you want to scan Gmails in bulk, you can use the following codes.
