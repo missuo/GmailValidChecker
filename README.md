@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-12 04:52:04
  * @LastEditors: Vincent Young
- * @LastEditTime: 2022-10-12 06:15:17
+ * @LastEditTime: 2022-10-12 20:52:23
  * @FilePath: /GmailValidChecker/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -20,22 +20,41 @@ The program will return only two results:
 
 **You must be aware that an `Unregistered` status does not mean that you are truly unregistered. The program cannot determine whether Gmail is unregistered or blocked.**
 
+## Update
+### 0.0.4
+- Add Enhanced Mode
+- Support for truly unregistered judgments
+
 ## Usage
-1. You need to install `GmailChecker` before.
+**You need to install `GmailChecker` before.**
 ```bash
 pip install GmailChecker
 ```
-2. Create a new `.py` file with the following codes.
+### Lite Mode
+1. Create a new `.py` file with the following codes.
 ```python
 from GmailChecker import GmailChecker
 GmailChecker.verify("admin@gmail.com")
+# Don't Print Alive Result
+GmailChecker.verify("admin@gmail.com", 1)
 ```
-3. If you want to scan Gmails in bulk, you can use the following codes.
+2. If you want to scan Gmails in bulk, you can use the following codes.
 ```python
 from GmailChecker import GmailChecker
 for i in range(1000000, 9999999):
     email = str(i) + '@gmail.com'
     GmailChecker.verify(email)
+```
+
+### Enhanced Mode
+1. You should download `chromedriver` to file directory.
+
+2. Create a new `.py` file with the following codes.
+```python
+from GmailChecker import GmailCheckerEnhanced
+for i in range(9960001, 9969999):
+    # By default only unregistered results will be output
+    GmailCheckerEnhanced.scan(i)
 ```
 
 ## PyPi
