@@ -2,7 +2,7 @@
 Author: Vincent Young
 Date: 2022-07-24 04:27:43
 LastEditors: Vincent Young
-LastEditTime: 2022-10-12 20:54:40
+LastEditTime: 2022-10-12 20:56:59
 FilePath: /GmailValidChecker/setup.py
 Telegram: https://t.me/missuo
 
@@ -16,7 +16,7 @@ with open("README.md","r") as fh:
 setup(
     name="GmailChecker",
     author="missuo",
-    version="0.0.4",
+    version="0.0.5",
     license='MIT',
     long_description= long_description,
     long_description_content_type="text/markdown",
@@ -29,7 +29,8 @@ setup(
     zip_safe=False,
 
     install_requires=[
-        'requests'
+        'requests',
+        'selenium'
     ],
     classifiers=[
         'Environment :: Web Environment',
