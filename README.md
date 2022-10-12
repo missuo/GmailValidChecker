@@ -30,7 +30,7 @@ pip install GmailChecker
 from GmailChecker import GmailChecker
 GmailChecker.verify("admin@gmail.com")
 ```
-3. If you want to sweep Gmails in bulk, you can use the following codes.
+3. If you want to scan Gmails in bulk, you can use the following codes.
 ```python
 from GmailChecker import GmailChecker
 for i in range(1000000, 9999999):
