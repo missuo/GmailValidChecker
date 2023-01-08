@@ -74,6 +74,7 @@ for i in range(9960001, 9969999):
 ## Reference Articles
 [Abusing Gmail to get previously unlisted e-mail addresses](https://blog.0day.rocks/abusing-gmail-to-get-previously-unlisted-e-mail-addresses-41544b62b2)
 
-## License
-MIT License
+## Author
+
+**GmailValidChecker** © [Vincent Young](https://github.com/missuo), Released under the [MIT](./LICENSE) License.<br>
 
