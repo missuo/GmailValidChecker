@@ -38,18 +38,18 @@ def openChrome(openType=None):
 		return driver
 
 def startVerify(driver, emailPrefix):
-	driver.get("https://accounts.google.com/signup/v2/webcreateaccount?biz=false&cc=JP&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fnlr%3D1&dsh=S2013611188%3A1665547988680440&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&service=accountsettings&authuser=0")
-	driver.find_element('xpath','//*[@id="username"]').send_keys(emailPrefix)
-	driver.find_element('xpath', '//*[@id="passwd"]/div[1]/div/div[1]/input').send_keys('ehihwihewq')
+	driver.get("https://accounts.google.com/")
+	driver.find_element('xpath','//*[@type="email"]').send_keys(emailPrefix)
+	driver.find_element('xpath','//*[text()="Next"]').click()
 	time.sleep(5)
-	result = driver.find_element('xpath','//*[@id="view_container"]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[2]/div[1]/div/div[2]/div[2]').is_displayed()
+	result = driver.find_element('xpath','//*[text()="Couldn’t find your Google Account"]').is_displayed()
 	return result
 
 def scan(emailPrefix):
 	emailPrefix = str(emailPrefix)
 	if verify(emailPrefix) == False:
 		driver = openChrome()
-		if startVerify(driver, emailPrefix) == False:
+		if startVerify(driver, emailPrefix) == True:
 			f = open("./result.txt", "a")
 			f.write(emailPrefix + "\n")
 			f.close()
